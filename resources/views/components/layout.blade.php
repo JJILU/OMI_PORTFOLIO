@@ -15,7 +15,9 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -49,15 +51,25 @@
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="{{ route('portfolio.index')}}" class="active">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="resume.html">Resume</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
+          <li>
+            <a href="{{ route('portfolio.index') }}" @class(['active'=> request()->routeIs('portfolio.index')])>
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="{{ route('portfolio.about') }}" @class(['active'=> request()->routeIs('portfolio.about')])>
+              About
+            </a>
+          </li>
+          <li><a href="{{ route('portfolio.resume') }}" 
+            >Resume</a></li>
+          <li><a href="{{ route('portfolio.services') }}" @class(['active'=> request()->routeIs('portfolio.services')])>Services</a></li>
+          <li><a href="{{ route('portfolio.portfolio') }}" @class(['active'=> request()->routeIs('portfolio.portfolio')])>Portfolio</a></li>
           <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
               <li><a href="#">Dropdown 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i
+                    class="bi bi-chevron-down toggle-dropdown"></i></a>
                 <ul>
                   <li><a href="#">Deep Dropdown 1</a></li>
                   <li><a href="#">Deep Dropdown 2</a></li>
@@ -88,7 +100,9 @@
 
   @if(session("success"))
   <div class="container mt-3">
-    <div class="alert alert-success alert-dismissible fade show shadow-sm d-flex align-items-center justify-content-between" role="alert">
+    <div
+      class="alert alert-success alert-dismissible fade show shadow-sm d-flex align-items-center justify-content-between"
+      role="alert">
 
       <div class="d-flex align-items-center">
         <i class="bi bi-check-circle-fill me-2"></i>
@@ -99,7 +113,7 @@
 
     </div>
   </div>
-@endif
+  @endif
 
   {{-- content goes here --}}
   {{ $slot }}
@@ -109,7 +123,8 @@
 
     <div class="container">
       <div class="copyright text-center ">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename">OMI SOFTWARE DEVELOPERS</strong> <span>All Rights Reserved<br></span></p>
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">OMI SOFTWARE DEVELOPERS</strong> <span>All Rights
+            Reserved<br></span></p>
       </div>
       <div class="social-links d-flex justify-content-center">
         <a href=""><i class="bi bi-twitter-x"></i></a>
@@ -123,14 +138,15 @@
         <!-- Licensing information: https://bootstrapmade.com/license/ -->
         <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
         Designed by <a href="https://bootstrapmade.com/">OMI SOFTWARE DEVELOPERS</a>
-         {{-- Distributed by <a href=“https://themewagon.com>ThemeWagon --}}
+        {{-- Distributed by <a href=“https://themewagon.com>ThemeWagon --}}
       </div>
     </div>
 
   </footer>
 
   <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
 
   <!-- Preloader -->
   <div id="preloader"></div>

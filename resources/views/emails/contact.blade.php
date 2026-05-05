@@ -42,7 +42,7 @@
                 <i class="bi bi-telephone"></i>
                 <div>
                   <h3>Call Me</h3>
-                  <p>+260 977583629</p>
+                  <p>+260 977583629/767660569</p>
                 </div>
               </div>
 
