@@ -11,7 +11,7 @@
           <div class="col-lg-8">
             <h2>Naomi Kapele</h2>
             <p>I'm a professional sofware developer from Lusaka,Zambia</p>
-            <a href="about.html" class="btn-get-started">About Me</a>
+            <a href="{{ route('portfolio.about') }}" class="btn-get-started">About Me</a>
           </div>
         </div>
       </div>

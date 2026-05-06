@@ -2,7 +2,7 @@
 
 
   {{-- VALIDATION ERRORS --}}
-  @if($errors->any())
+  {{-- @if($errors->any())
     <div class="bg-red-200 text-red-800 text-center py-3">
       <ul class="mb-0">
         @foreach($errors->all() as $error)
@@ -10,7 +10,7 @@
         @endforeach
       </ul>
     </div>
-  @endif
+  @endif --}}
 
   <main class="main">
 
@@ -100,13 +100,24 @@
                             class="form-control">{{ old('message') }}</textarea>
                 </div>
 
-                <div class="col-md-12 text-center">
-                  <button type="submit" class="btn btn-primary">
+                <div class="col-md-12 text-center" >
+                  <button type="submit" class="btn btn-primary" style="background-color:  #34b7a7; border:0; width:100%; padding: 15px">
                     Send Message
                   </button>
                 </div>
 
               </div>
+
+              {{-- Validation Errors --}}
+              @if ($errors->any())
+                 <div>
+                  <ul style="padding: 10px; margin:7px; background-color: #d5c2c2;text-decoration:none; text-align:center;list-style: none">
+                    @foreach ($errors->all() as $error )
+                      <li style="color:#ab1717; margin-top: 5px; font-weight: bold">{{ $error }}</li>
+                    @endforeach
+                  </ul>
+                </div>   
+              @endif
 
             </form>
 
